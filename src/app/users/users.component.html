@@ -1,0 +1,22 @@
+<h1 class="text-center">User Data</h1>
+<div *ngIf="users ; else nousers">
+  <table class="table table-borderd">
+    <tr  class="bg-warning">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td> <a [routerLink]="['/user',user.id]">{{user.id}}</a></td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+
+    </tr>
+
+  </table>
+</div>
+<ng-template #nousers>
+  <p class="alert alert-danger text-center">{{errorMessage}}</p>
+</ng-template>
