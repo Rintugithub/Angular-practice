@@ -13,8 +13,8 @@ import { AddressComponent } from './address/address.component';
 import { CompanyComponent } from './company/company.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { LocationComponent } from './location/location.component';
-// import { ProductdashboardModule } from './productdashboard/productdashboard.module';
-
+import { ProductdashboardModule } from './productdashboard/productdashboard.module';
+// import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +32,7 @@ import { LocationComponent } from './location/location.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    // MatSnackBarModule
   ],
   providers: [UserdataService],
   bootstrap: [AppComponent]
