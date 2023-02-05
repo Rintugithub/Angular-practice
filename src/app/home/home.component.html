@@ -1,3 +1,13 @@
-<h1 class="text-center">Home component</h1>
-<input type="text" [(ngModel)]="username")]/>
-<h1>{{username}}</h1>
+
+
+  <!-- <input style="margin-left: 300px;margin-top: 250px;" type="text" (keyup)="getval($event)">
+<h1 style="text-align: center;">{{username}}</h1>
+<input type="text" [(ngModel)]="data">
+<h1>{{data}}</h1> -->
+<div #col class="val"> </div>
+<br>
+<select style=" margin: 20px 30px ;" (change)="changebg($event)">
+  <option>select colour</option>
+  <option *ngFor="let col of colours" [value]="col" >{{col}}</option>
+
+</select>
