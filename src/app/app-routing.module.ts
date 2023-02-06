@@ -31,9 +31,9 @@ const routes: Routes = [
   ],
 },
   { path: 'home', component: HomeComponent },
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: '**', redirectTo: 'users' },
-  { path: 'product',
-  loadChildren: () => import('./productdashboard/productdashboard.module').then(m => m.ProductdashboardModule)}
+  
 ];
 
 @NgModule({

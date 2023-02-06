@@ -19,10 +19,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 
   ngOnInit(): void {
     // console.log(this.value);
-
-
-
-  }
+ }
 
   getval(item:any){
   console.log((item.target as HTMLInputElement).value);
