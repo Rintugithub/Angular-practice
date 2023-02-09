@@ -6,8 +6,22 @@
 <h1>{{data}}</h1> -->
 <div #col class="val"> </div>
 <br>
-<select style=" margin: 20px 30px ;" (change)="changebg($event)">
+<!-- <select style=" margin: 20px 30px ;" (change)="changebg($event)">
   <option>select colour</option>
-  <option *ngFor="let col of colours" >{{col}}</option>
+  <option *ngFor="let col of colours" >{{col}}</option> -->
+<!-- </select> -->
+  <select style=" margin: 20px 30px ; color:red"
+   [value]="col" #v (change)="changebg(v.value)">
+    <option>select colour</option>
+    <option *ngFor="let col of colours" >{{col}}</option>
 
 </select>
+
+<button style=" margin:5px"
+ class="btn btn-success"
+*ngFor="let col of colours"
+ [value]="col"
+ #v (click)="changebg(v.value)">{{col}}</button>
+<h1>selected colour is {{colourval}}</h1>
+<input type="text" [value]="value" #s (keyup)="search(s.value)">
+<h1>{{inputdata}}</h1>

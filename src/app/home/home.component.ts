@@ -6,7 +6,8 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   styleUrls: ['./home.component.css']
 })
  export class HomeComponent implements OnInit,AfterViewInit {
-  value!:string;
+  inputdata:any;
+  value:string="";
  username:any;
  data:string="hai";
  colours:string[]=["red","green","blue","orange","yellow","lightgreen","lightblue"];
@@ -27,10 +28,18 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 }
 
 changebg(color:any){
-  console.log((color.target as HTMLInputElement).value);
-  this.colourval= (color.target as HTMLInputElement).value;
+  // console.log((color.target as HTMLInputElement).value);
+  // this.colourval= (color.target as HTMLInputElement).value;
+  // this.marker.nativeElement.style.backgroundColor = this.colourval;
+  console.log(color);
+  this.colourval= color;
   this.marker.nativeElement.style.backgroundColor = this.colourval;
 
+
+}
+search(value:any){
+  this.inputdata = value;
+  console.log(this.inputdata);
 
 }
 
