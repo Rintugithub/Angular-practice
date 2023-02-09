@@ -13,6 +13,7 @@ import { AddressComponent } from './address/address.component';
 import { CompanyComponent } from './company/company.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { LocationComponent } from './location/location.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LocationComponent } from './location/location.component';
     CompanyComponent,
     FeedbackComponent,
     LocationComponent,
+    ObservableComponent,
   ],
   imports: [
     BrowserModule,

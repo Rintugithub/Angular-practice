@@ -1,3 +1,4 @@
+import { ObservableComponent } from './observable/observable.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CompanyComponent } from './company/company.component';
 import { AddressComponent } from './address/address.component';
@@ -11,6 +12,8 @@ import { LocationComponent } from './location/location.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
+    { path: 'observable', component: ObservableComponent },
+
   {
     path: 'user/:id',
     component: UserComponent,
@@ -33,7 +36,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: '**', redirectTo: 'users' },
-  
+
 ];
 
 @NgModule({

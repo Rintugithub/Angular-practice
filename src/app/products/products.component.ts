@@ -10,6 +10,8 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("product component");
+
   }
 
 }
