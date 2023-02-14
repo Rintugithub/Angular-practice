@@ -18,7 +18,7 @@
 </select>
 
 <button style=" margin:5px"
- class="btn btn-success"
+ class="btn btn-primary"
 *ngFor="let col of colours"
  [value]="col"
  #v (click)="changebg(v.value)">{{col}}</button>
