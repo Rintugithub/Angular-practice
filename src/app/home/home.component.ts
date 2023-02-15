@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild,ViewChildren} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,8 +13,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
  colours:string[]=["red","green","blue","orange","yellow","lightgreen","lightblue"];
  colourval:any;
  @ViewChild("col")marker!:ElementRef<any>;
+ @ViewChildren("msg")markers!:QueryList<any>;
   constructor() { }
   ngAfterViewInit(): void {
+    this.markers.map(value=> value.nativeElement.style.color = "orange");
+
 
   }
 
