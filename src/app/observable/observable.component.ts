@@ -31,7 +31,7 @@ export class ObservableComponent implements OnInit {
 
     }
     val();
-    // promise.then(result=>console.log(result));
+    // promise.then(result=>console.log(result)).catch(error=>console.log(error));
     const observable= new Observable(res=>{
       setTimeout(() => {
         res.next("observable working");

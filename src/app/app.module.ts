@@ -14,6 +14,7 @@ import { CompanyComponent } from './company/company.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { LocationComponent } from './location/location.component';
 import { ObservableComponent } from './observable/observable.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ObservableComponent } from './observable/observable.component';
     FeedbackComponent,
     LocationComponent,
     ObservableComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,

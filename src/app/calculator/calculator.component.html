@@ -1,0 +1,28 @@
+<h1>CALCULATOR</h1>
+<div class="container">
+    <form action="">
+        <p>CASIO</p>
+        <input type="text" #col id="screen">
+        <br>
+        <input class="button number" type="button"  value="7" (click)="btnClick($event)">
+        <input class="button number" type="button"   value="8" (click)="btnClick($event)">
+        <input class="button number" type="button"   value="9" (click)="btnClick($event)">
+        <input class="button operator" type="button"   value="/" (click)="btnClick($event)">
+        <br>
+        <input class="button number" type="button"   value="4" (click)="btnClick($event)">
+        <input class="button number" type="button"  value="5" (click)="btnClick($event)">
+        <input class="button number" type="button"  value="6" (click)="btnClick($event)">
+        <input class="button operator" type="button"   value="*" (click)="btnClick($event)">
+        <br>
+        <input class="button number" type="button"  value="1" (click)="btnClick($event)">
+        <input class="button number" type="button"  value="2" (click)="btnClick($event)">
+        <input class="button number" type="button"   value="3" (click)="btnClick($event)">
+        <input class="button operator" type="button"   value="+" (click)="btnClick($event)">
+         <br>
+         <input class="button clear" type="button"  value="C" (click)="clearScreen()">
+         <input class="button number" type="button"  value="0" (click)="btnClick($event)">
+         <input class="button result" type="button"  value="=" (click)="findResult()">
+         <input class="button operator" type="button"   value="-" (click)="btnClick($event)">
+
+    </form>
+</div>

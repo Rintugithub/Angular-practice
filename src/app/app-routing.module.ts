@@ -1,3 +1,4 @@
+import { CalculatorComponent } from './calculator/calculator.component';
 import { ObservableComponent } from './observable/observable.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { CompanyComponent } from './company/company.component';
@@ -13,6 +14,8 @@ import { LocationComponent } from './location/location.component';
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
     { path: 'observable', component: ObservableComponent },
+    { path: 'calculator', component: CalculatorComponent },
+
 
   {
     path: 'user/:id',
