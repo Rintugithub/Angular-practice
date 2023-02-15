@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import {ajax} from 'rxjs/ajax'
 
 @Component({
@@ -44,6 +44,7 @@ export class ObservableComponent implements OnInit {
       }, 1000);
     });
     observable.subscribe(res=> console.log(res));
+    // rxjs subject
     const subject = new Subject();
     // sub1
     subject.subscribe(d=>console.log(d));
@@ -56,6 +57,12 @@ export class ObservableComponent implements OnInit {
     subject1.subscribe(data=>console.log(data));
     subject1.subscribe(data=>console.log(data));
     const result = data.subscribe(subject1);
+    // rxjs behaviour subject
+    const bsubject = new BehaviorSubject<number>(12);
+     bsubject.subscribe(datas=>console.log(`behaviour subject value1 ${datas}`));
+     bsubject.next(200);
+     bsubject.subscribe(datas=>console.log(`behaviour subject value1 ${datas}`));
+
 
 
   }
