@@ -54,6 +54,8 @@ dec(){
   this.child.decrement();
 
 }
-
+reset(){
+  this.child.rst();
+}
 
 }

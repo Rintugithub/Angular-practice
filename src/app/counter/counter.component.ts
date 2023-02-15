@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-public counter:number =0;
+public counter:any =0;
   constructor() { }
 
   ngOnInit(): void {
@@ -18,6 +18,9 @@ public counter:number =0;
   decrement(){
     this.counter--;
 
+  }
+  rst(){
+    this.counter = 0;
   }
 
 }
