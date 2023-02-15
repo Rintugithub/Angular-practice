@@ -17,6 +17,7 @@ import { ObservableComponent } from './observable/observable.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ChildComponent } from './child/child.component';
 import { AuthGuard } from './auth.guard';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AuthGuard } from './auth.guard';
     LocationComponent,
     ObservableComponent,
     CalculatorComponent,
+    CounterComponent,
     // ChildComponent,
   ],
   imports: [

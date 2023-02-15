@@ -27,3 +27,12 @@
 <h1>{{inputdata}}</h1>
 <h1 #msg class="text-center"> view children</h1>
 <h2 #msg class="text-center">view children</h2>
+<!-- passdata  -->
+<app-counter #childView></app-counter>
+<div>
+  <button (click)="inc()">Increment</button>
+  <button (click)="dec()">Decrement</button>
+
+</div>
+<h3>Counter {{child?.counter}}</h3>
+

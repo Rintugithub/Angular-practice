@@ -1,3 +1,4 @@
+import { CounterComponent } from './../counter/counter.component';
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild,ViewChildren} from '@angular/core';
 
 @Component({
@@ -14,6 +15,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild,View
  colourval:any;
  @ViewChild("col")marker!:ElementRef<any>;
  @ViewChildren("msg")markers!:QueryList<any>;
+ @ViewChild("childView")child!:CounterComponent;
   constructor() { }
   ngAfterViewInit(): void {
     this.markers.map(value=> value.nativeElement.style.color = "orange");
@@ -45,5 +47,13 @@ search(value:any){
   console.log(this.inputdata);
 
 }
+inc(){
+this.child.increment();
+}
+dec(){
+  this.child.decrement();
+
+}
+
 
 }
