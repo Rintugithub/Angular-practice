@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { LocationComponent } from './location/location.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
@@ -28,7 +29,7 @@ const routes: Routes = [
     ],
   },
 
-  { path: 'users', component: UsersComponent },
+  { path: 'users', component: UsersComponent , canActivate: [AuthGuard], },
   { path: 'about', component: AboutComponent ,
   children: [
 

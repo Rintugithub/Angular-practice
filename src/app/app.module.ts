@@ -16,6 +16,7 @@ import { LocationComponent } from './location/location.component';
 import { ObservableComponent } from './observable/observable.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ChildComponent } from './child/child.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ChildComponent } from './child/child.component';
     // ProductsModule
     // MatSnackBarModule
   ],
-  providers: [UserdataService],
+  providers: [UserdataService,
+    AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
