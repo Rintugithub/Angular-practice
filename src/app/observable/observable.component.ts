@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import {ajax} from 'rxjs/ajax'
 
 @Component({
   selector: 'app-observable',
@@ -43,6 +44,19 @@ export class ObservableComponent implements OnInit {
       }, 1000);
     });
     observable.subscribe(res=> console.log(res));
+    const subject = new Subject();
+    // sub1
+    subject.subscribe(d=>console.log(d));
+    // sub2
+    subject.subscribe(d=>console.log(d));
+    subject.next(Math.random());
+    const subject1 = new Subject();
+
+    const data = ajax("https://jsonplaceholder.typicode.com/users");
+    subject1.subscribe(data=>console.log(data));
+    subject1.subscribe(data=>console.log(data));
+    const result = data.subscribe(subject1);
+
 
   }
 
