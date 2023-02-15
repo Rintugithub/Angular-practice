@@ -6,6 +6,8 @@
     <th>Name</th>
     <th>Username</th>
     <th>Email</th>
+    <th>Website</th>
+    <th>Phone</th>
 
     </tr>
     <tr *ngFor="let user of users">
@@ -13,6 +15,9 @@
       <td>{{user.name | uppercase}}</td>
       <td>{{user.username}}</td>
       <td>{{user.email | lowercase }}</td>
+      <td>{{user.website  }}</td>
+      <td>{{user.phone  }}</td>
+
 
 
     </tr>
