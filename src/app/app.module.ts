@@ -15,6 +15,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { LocationComponent } from './location/location.component';
 import { ObservableComponent } from './observable/observable.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
     LocationComponent,
     ObservableComponent,
     CalculatorComponent,
+    // ChildComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  parent:string= "hello child";
   selectedcountry:any;
   countries:any[]=[
     {code:"ind",country:"India"},
