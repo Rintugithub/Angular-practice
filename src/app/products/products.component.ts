@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
   parent:string= "hello child";
+  childData!:string;
   selectedcountry:any;
   countries:any[]=[
     {code:"ind",country:"India"},
@@ -25,6 +26,10 @@ export class ProductsComponent implements OnInit {
   }
   choice(code:any){
     this.selectedcountry = (code.target as HTMLInputElement).value;
+  }
+  parentMethod(data:any){
+
+   this.childData = data;
   }
 
 }
