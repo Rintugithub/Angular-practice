@@ -1,1 +1,10 @@
 <p>products works!</p>
+select country : <select (change)="choice($event)">
+  <option >select country</option>
+  <option *ngFor="let c of countries" [value]="c.code">{{c.country}}</option>
+</select>
+<div>
+  <br>
+  <h1 class="bg-success">your selected countrt code: {{selectedcountry}}</h1>
+</div>
+
