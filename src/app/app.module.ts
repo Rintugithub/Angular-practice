@@ -18,6 +18,8 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { ChildComponent } from './child/child.component';
 import { AuthGuard } from './auth.guard';
 import { CounterComponent } from './counter/counter.component';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
+import { WidgetComponent } from './widget/widget.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { CounterComponent } from './counter/counter.component';
     ObservableComponent,
     CalculatorComponent,
     CounterComponent,
+    ContentProjectionComponent,
+    WidgetComponent,
     // ChildComponent,
   ],
   imports: [

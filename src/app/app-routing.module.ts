@@ -1,3 +1,4 @@
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ObservableComponent } from './observable/observable.component';
 import { FeedbackComponent } from './feedback/feedback.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: 'calculator', component: CalculatorComponent },
 
 
+
   {
     path: 'user/:id',
     component: UserComponent,
@@ -30,6 +32,8 @@ const routes: Routes = [
   },
 
   { path: 'users', component: UsersComponent , canActivate: [AuthGuard], },
+  { path: 'cnt-prjn', component: ContentProjectionComponent },
+
   { path: 'about', component: AboutComponent ,
   children: [
 

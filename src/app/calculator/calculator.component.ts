@@ -8,21 +8,25 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   @ViewChild("col")marker!:ElementRef<any>;
   buttonvalue:any;
-
   constructor() { }
 
   ngOnInit(): void {
 
 
   }
-   btnClick(data:any){
-    this.buttonvalue =(data.target as HTMLInputElement).value;
+   btnClick(value:any){
+    this.buttonvalue =(value.target as HTMLInputElement).value;
     console.log(this.buttonvalue);
-    console.log( this.marker.nativeElement.buttonvalue);
 
 
-    this.marker.nativeElement.buttonvalue += this.buttonvalue;}
+    console.log( this.marker.nativeElement);
+
+
+    this.marker.nativeElement.buttonvalue += this.buttonvalue ;
+  }
     clearScreen(){
+      console.log( this.marker.nativeElement.value);
+
       this.marker.nativeElement.value = "";
    }
    findResult(){
