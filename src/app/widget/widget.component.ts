@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ContentChild, Input, OnInit, ElementRef, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-widget',
@@ -6,13 +6,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class WidgetComponent implements OnInit {
+export class WidgetComponent implements OnInit,AfterContentInit {
   @Input() products!:any[];
+  @ContentChildren("head")contentHeader!:QueryList<any>;
 
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
+  ngAfterContentInit() {
+    this.contentHeader.map(value=> value.nativeElement.style.color = "red");
+
+
+
+  }
+
 
 }
