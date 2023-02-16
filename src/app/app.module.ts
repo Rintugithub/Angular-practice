@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { UserdataService } from './services/userdata.service';
-import { HttpClientModule } from  '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from  '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { AddressComponent } from './address/address.component';
 import { CompanyComponent } from './company/company.component';
@@ -20,6 +20,9 @@ import { AuthGuard } from './auth.guard';
 import { CounterComponent } from './counter/counter.component';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { WidgetComponent } from './widget/widget.component';
+import { HeadersInterceptor } from './headers.interceptor';
+import { AuthService } from './auth.service';
+import { LoginInterceptor } from './login.interceptor';
 
 @NgModule({
   declarations: [
@@ -47,8 +50,14 @@ import { WidgetComponent } from './widget/widget.component';
     // ProductsModule
     // MatSnackBarModule
   ],
-  providers: [UserdataService,
-    AuthGuard],
+  providers:
+  [UserdataService,
+    AuthService,
+    AuthGuard,
+  {provide:HTTP_INTERCEPTORS,useClass:HeadersInterceptor, multi:true },
+  {provide:HTTP_INTERCEPTORS,useClass:LoginInterceptor, multi:true }
+
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

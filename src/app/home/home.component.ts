@@ -18,7 +18,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild,View
  @ViewChild("childView")child!:CounterComponent;
   constructor() { }
   ngAfterViewInit(): void {
-    this.markers.map(value=> value.nativeElement.style.color = "orange");
+    this.markers.map(value=> value.nativeElement.style.color = "red");
 
 
   }
