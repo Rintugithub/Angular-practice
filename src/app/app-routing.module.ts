@@ -1,3 +1,4 @@
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ObservableComponent } from './observable/observable.component';
@@ -33,6 +34,8 @@ const routes: Routes = [
 
   { path: 'users', component: UsersComponent , canActivate: [AuthGuard], },
   { path: 'cnt-prjn', component: ContentProjectionComponent },
+  { path: 'reactive', component: ReactiveformsComponent },
+
 
   { path: 'about', component: AboutComponent ,
   children: [

@@ -21,6 +21,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild,View
     this.markers.map(value=> value.nativeElement.style.color = "red");
 
 
+
   }
 
   ngOnInit(): void {
@@ -36,7 +37,9 @@ changebg(color:any){
   // console.log((color.target as HTMLInputElement).value);
   // this.colourval= (color.target as HTMLInputElement).value;
   // this.marker.nativeElement.style.backgroundColor = this.colourval;
+
   console.log(color);
+
   this.colourval= color;
   this.marker.nativeElement.style.backgroundColor = this.colourval;
 

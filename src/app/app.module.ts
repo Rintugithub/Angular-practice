@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { WidgetComponent } from './widget/widget.component';
 import { HeadersInterceptor } from './headers.interceptor';
 import { AuthService } from './auth.service';
 import { LoginInterceptor } from './login.interceptor';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { LoginInterceptor } from './login.interceptor';
     CounterComponent,
     ContentProjectionComponent,
     WidgetComponent,
+    ReactiveformsComponent,
     // ChildComponent,
   ],
   imports: [
@@ -47,6 +49,8 @@ import { LoginInterceptor } from './login.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
+
     // ProductsModule
     // MatSnackBarModule
   ],

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit {
-public counter:any =0;
+public counter!:any;
   constructor() { }
 
   ngOnInit(): void {
